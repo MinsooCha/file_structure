@@ -20,7 +20,7 @@ int main()
 
 		printf("\n");
 		duration = ((double)(finish - start)/CLOCKS_PER_SEC);
-		printf(" %d 층일떄 실행시간은 %.6f 초 입니다.\n",top_num,duration);
+		printf(" %d 층일떄 실행시간은 %.3f 초 입니다.\n",top_num,duration);
 
 		top_num++;
 	}
