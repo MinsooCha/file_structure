@@ -22,7 +22,7 @@ int main()
 
 	duration = ((double)(finish - start) / CLOCKS_PER_SEC);
 	printf("이동횟수는 %d 회 입니다 \n", count);
-	printf("실행시간은 %.6f 초 입니다.\n", duration);
+	printf("실행시간은 %.3f 초 입니다.\n", duration);
 
 }
 void hanoi_top(int number, char start, char temp, char finish, int* count)

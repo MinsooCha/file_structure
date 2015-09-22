@@ -17,16 +17,18 @@ int main()
 	int number;
 	int sort_Arr[MAXSIZE];
 
-	printf("생성할 배열의 크기를 입력하시요 : ");
-	scanf("%d", &number);
 
 	do
 	{
+		printf("생성할 배열의 크기를 입력하시요 : ");
+		scanf("%d", &number);
+
+
 		Arr_allocate(sort_Arr, number);
 		sort(sort_Arr, number);
 		Arr_print(sort_Arr, number);
 
-		printf("종료[space]\n");
+		printf(" 재시작[Anykey] 종료[space]\n");
 	} while (getch() != ' ');
 
 	return 0;

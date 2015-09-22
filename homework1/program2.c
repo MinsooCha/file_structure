@@ -14,14 +14,14 @@ void Arr_allocate(int list[], int n);
 void Arr_print(int list[], int n);
 int main()
 {
-	
-	int number=1000;
+
+	int number = 1000;
 	int sort_Arr[MAXSIZE];
 	clock_t start, stop;
 	double duration;
 	FILE* fp = fopen("result.txt", "w");
 
-	
+
 
 	do
 	{
@@ -31,14 +31,17 @@ int main()
 		stop = clock();
 
 		duration = ((double)(stop - start)) / CLOCKS_PER_SEC;
-		printf("%.6f\n", duration);
-		fprintf(fp,"number =%d time = %f\n", number,duration);
 
-		number++;
-	} while (number != 100000);
+		fprintf(fp, "number =%d time = %.3f\n", number, duration);
+
+		printf("%d 완료..\n", number);
+		number = number + 10000;
+
+	} while (number < 100000);
 
 
 	fclose(fp);
+	printf("sorting 완료! \n");
 	return 0;
 }
 void Arr_allocate(int sort_Arr[], int number)
@@ -54,7 +57,7 @@ void sort(int list[], int n)
 {
 
 	int i, j, min, temp;
-	
+
 	for (i = 0; i < n - 1; i++)
 	{
 		min = i;
